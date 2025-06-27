@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tailwind css Practice</title>
+  <!-- customs css file -->
+  <link rel="stylesheet" href="customs.css" />
+  <!-- !-- tailwind css customs file -->
+  <link rel="stylesheet" href="output.css" />
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+</head>
+
+<body class="bg-bg_main capitalize font-display-poppins">
+  <!-- header area started -->
+  <header class="w-full flex md:flex-col bg-black items-center fixed top-0 shadow-2xl">
+    <!-- navigation -->
+    <nav class="bg-black px-4 md:px-42 py-4 md:py-8 flex justify-between items-center w-full">
+      <!-- logo -->
+      <div class="sticky z-[1]">
+        <a href="./" class="flex items-center">
+          <img src="assets/image/logo.png" alt="logo" />
+          <h2
+            class="md:text-4xl text-2xl font-extrabold bg-gradient-to-r from-[#F7AD2F] to-[#F86535] bg-clip-text text-transparent">
+            RDK TECH
+          </h2>
+        </a>
+      </div>
+      <!-- item -->
+      <div class="md:flex items-center gap-5 hidden">
+        <!-- search -->
+        <div class="flex md:hidden xl:flex items-center justify-between w-md md:bg-white bg-black h-auto rounded-full">
+          <input type="search" placeholder="Search Products.." class="pl-4 w-full h-full focus:outline-none" />
+          <button class="bg-primary w-14 h-12 rounded-r-full hover:bg-amber-600 transition duration-300">
+            <i class="fa-solid fa-magnifying-glass text-white text-2xl"></i>
+          </button>
+        </div>
+        <div class="lg:flex items-center gap-5 md:hidden">
+          <button
+            class="bg-primary py-2 px-4 rounded-full text-white font-semibold text-lg hover:bg-amber-600 transition duration-300">
+            <i class="fa-regular fa-user"></i> Account
+          </button>
+          <button
+            class="bg-primary py-2 px-4 rounded-full text-white font-semibold text-lg hover:bg-amber-600 transition duration-300">
+            <i class="fa-solid fa-tag"></i> Summer Sales
+          </button>
+          <button
+            class="bg-primary py-2 px-4 rounded-full text-white font-semibold text-lg hover:bg-amber-600 transition duration-300">
+            <i class="fa-solid fa-computer"></i> PC Builder
+          </button>
+          <div class="flex flex-col gap-0">
+            <button class="">
+              <i class="fa-solid fa-cart-shopping text-primary font-bold text-xl"></i>
+            </button>
+            <span class="text-white text-lg">Your Cart</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- catagory -->
+    <div class="md:bg-white md:w-full px-4 md:px-42 py-4 md:py-6 relative flex items-center">
+      <!-- mobile menu -->
+      <input type="checkbox" id="checkbox" class="peer hidden" />
+      <label for="checkbox" class="flex items-center gap-1 flex-col checked fixed z-50 right-4 md:hidden">
+        <span class="bg-white hover:bg-primary inline-block w-8 h-1 transition duration-300"></span>
+        <span class="bg-white hover:bg-primary inline-block w-8 h-1 transition duration-300"></span>
+        <span class="bg-white hover:bg-primary inline-block w-8 h-1 transition duration-300"></span>
+      </label>
+      <ul
+        class="bg-black/40 fixed overflow-hidden top-0 right-0 h-screen w-0 peer-checked:w-[80%] z-40 flex flex-col md:flex-row items-center justify-evenly py-16 md:py-0 md:justify-between transition-all duration-300 ease-in-out md:w-full md:h-auto md:static md:bg-transparent">
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Desktop</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Laptops</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Components</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Monitor</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Accessories</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Gaming</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Camera</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Smart Watch</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Gimbal</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Audio</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Projector</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Office</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">Router</a>
+        </li>
+        <li>
+          <a href="#" class="text-white md:text-black hover:text-primary transition duration-300">TV</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- hero area started -->
+  <section class="container custom_container mt-32 md:mt-50">
+    <div
+      class="bg-[url(https://plus.unsplash.com/premium_photo-1687463804174-c74e82681ac9?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)] bg-center bg-no-repeat w-full h-[70vh] relative -z-30">
+      <!-- overly -->
+      <div class="absolute inset-0 bg-black/50 md:bg-black/25 p-4 md:p-24 flex flex-col justify-around">
+        <!-- logo -->
+        <div class="flex">
+          <a href="#" class="inline-block w-12 h-12 rounded-full bg-amber-950">
+            <img src="assets/image/logo.png" alt="logo image" />
+          </a>
+          <h2
+            class="text-2xl md:text-4xl font-extrabold bg-gradient-to-r from-[#F86535] to-[#F7AD2F] bg-clip-text text-transparent">
+            RDK TECH
+          </h2>
+        </div>
+        <!-- title -->
+        <div class="flex flex-col gap-4 md:gap-12">
+          <h2 class="text-white text-2xl md:text-6xl font-extrabold">
+            Ultimate <br class="hidden md:block" />
+            Computer Shop
+          </h2>
+          <p class="text-white md:w-1/2">
+            Discover a world of technology wonders at Tech Haven! From
+            powerful laptops to cutting-edge desktops, we have everything you
+            need for a seamless computing experience. Our knowledgeable team
+            and unbeatable prices make us the top choice for all your computer
+            needs. Visit Tech Haven today and embark on a journey of tech
+            excellence!
+          </p>
+          <button class="bg-black py-2 px-4 rounded-3xl md:w-1/5">
+            <span
+              class="bg-gradient-to-r from-[#F86535] to-[#F7AD2F] bg-clip-text text-transparent font-extrabold text-lg md:text-2xl">ORDER
+              NOW !</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- featured catagory -->
+  <section class="container custom_container">
+    <div class="py-16">
+      <!-- title -->
+      <div class="flex justify-center">
+        <div class="catagory_title">
+          <h2 class="ml-2">Featured Catagory</h2>
+        </div>
+      </div>
+      <!-- catagory -->
+      <div class="w-fit mx-auto grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-3 md:px-6 px-2">
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Processor.png" alt="Processor" />
+          <span>Processor</span>
+        </div>
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Motherboard.png" alt="Motherboard" />
+          <span>Motherboard</span>
+        </div>
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Graphics_Card.png" alt="Graphics Card" />
+          <span>Graphics Card</span>
+        </div>
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Monitor.png" alt="Monitor" />
+          <span>Monitor</span>
+        </div>
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Laptop.png" alt="Laptop" />
+          <span>Laptop</span>
+        </div>
+        <div
+          class="bg-white py-3 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/SSD.png" alt="SSD" />
+          <span>SSD</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Keyboard.png" alt="Keyboard" />
+          <span>Keyboard</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Mouse.png" alt="Mouse" />
+          <span>Mouse</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Action_Camera.png" alt="Action Camera" />
+          <span>Action Camera</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Smart_Watch.png" alt="Smart Watch" />
+          <span>Smart Watch</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Graphics_tablet.png" alt="Graphics tablet" />
+          <span>Graphics tablet</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Gimbal.png" alt="Gimbal" />
+          <span>Gimbal</span>
+        </div>
+        <div
+          class="bg-white py-4 px-4 rounded-2xl flex gap-2 items-center justify-center hover:bg-white/90 transition duration-300 hover:scale-105">
+          <img src="assets/image/featuredimg/Headphone.png" alt="Headphone" />
+          <span>Headphone</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- tops brands -->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Top Brands</h2>
+      </div>
+    </div>
+    <div class="bg-white py-6 px-2 w-full flex justify-between items-center flex-wrap">
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/apple.png" alt="apple" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/mi.png" alt="mi" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/heyper.png" alt="heyper" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/zotac.png" alt="zotac" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/intel.png" alt="intel" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/lg.png" alt="lg" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/baseus.png" alt="baseus" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/ramsta.png" alt="ramsta" class="h-[44px]" />
+      </div>
+      <div class="w-[137px] h-[118px] flex items-center justify-center">
+        <img src="assets/image/top_brands/realme.png" alt="realme" class="h-[44px]" />
+      </div>
+    </div>
+  </section>
+
+  <!-- best deal -->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Best Deals</h2>
+      </div>
+    </div>
+
+    <!-- best deal card -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/best_deal/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-xl">Xiaomi Redmi RMMNT215NF 21.45" FHD Monitor</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Graphics Tablets -->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Graphics Tablets</h2>
+      </div>
+    </div>
+
+    <!-- best deal card -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Graphics _ablets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Wacom PTH-660/K1-CX Intuos Pro Medium Paper Edition Dimensions 33.4 x 21.7 x 0.8 cm Pen
+            Graphics Tablet</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Graphics _ablets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Wacom PTH-660/K1-CX Intuos Pro Medium Paper Edition Dimensions 33.4 x 21.7 x 0.8 cm Pen
+            Graphics Tablet</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Graphics _ablets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Wacom PTH-660/K1-CX Intuos Pro Medium Paper Edition Dimensions 33.4 x 21.7 x 0.8 cm Pen
+            Graphics Tablet</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Graphics _ablets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Wacom PTH-660/K1-CX Intuos Pro Medium Paper Edition Dimensions 33.4 x 21.7 x 0.8 cm Pen
+            Graphics Tablet</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projector Best Deals -->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Projector Best Deals</h2>
+      </div>
+    </div>
+
+    <!-- best deal card -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center h-[151px]">
+          <img src="assets/image/Projector/pc1.png" alt="pc 1" class="w-[178px]" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">Benq MX550 3600 Lumens XGA Multimedia Projector</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center h-[151px]">
+          <img src="assets/image/Projector/pc1.png" alt="pc 1" class="w-[178px]" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">Benq MX550 3600 Lumens XGA Multimedia Projector</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center h-[151px]">
+          <img src="assets/image/Projector/pc1.png" alt="pc 1" class="w-[178px]" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">Benq MX550 3600 Lumens XGA Multimedia Projector</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center h-[151px]">
+          <img src="assets/image/Projector/pc1.png" alt="pc 1" class="w-[178px]" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">Benq MX550 3600 Lumens XGA Multimedia Projector</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- Accessories Best Deals-->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Accessories Best Deals</h2>
+      </div>
+    </div>
+
+    <!-- best deal card -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Accessories/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera with
+            Accessories Bundle</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Accessories/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera with
+            Accessories Bundle</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Accessories/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera with
+            Accessories Bundle</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-8 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Accessories/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">GoPro HERO10 Black 23MP 5.3K Ultra HD Waterproof Touch Screen Action Camera with
+            Accessories Bundle</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Gadgets Best Deals-->
+  <section class="container custom_container">
+    <!-- title -->
+    <div class="flex justify-center">
+      <div class="catagory_title">
+        <h2 class="ml-2">Gadgets Best Deals</h2>
+      </div>
+    </div>
+
+    <!-- Gadgets deal card -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- card -->
+      <div
+        class="py-6 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Gadgets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Mibro Watch Lite2 AMOLED Display Bluetooth Call Smart Watch</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-6 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Gadgets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Mibro Watch Lite2 AMOLED Display Bluetooth Call Smart Watch</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-6 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Gadgets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Mibro Watch Lite2 AMOLED Display Bluetooth Call Smart Watch</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+      <!-- card -->
+      <div
+        class="py-6 px-5 bg-white flex flex-col rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+        <!-- card image -->
+        <div class="w-full flex justify-center">
+          <img src="assets/image/Gadgets/pc1.png" alt="pc 1" />
+        </div>
+
+        <!-- card title -->
+        <div class="mt-10">
+          <h3 class="text-sm">Mibro Watch Lite2 AMOLED Display Bluetooth Call Smart Watch</h3>
+        </div>
+
+        <!-- card stars-->
+        <div class="mt-4">
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+          <span><i class="fa-solid fa-star text-primary"></i></span>
+        </div>
+
+        <!-- card price -->
+        <div class="mt-4">
+          <span class="text-2xl text-primary">৳ 8500</span> <span class="text-black/65 line-through">৳ 10,000</span>
+        </div>
+
+        <!-- card button -->
+        <div class="mt-5">
+          <button class="bg-primary py-3 px-6 text-white font-bold hover:bg-amber-600 transition duration-300">ADD TO
+            CART</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- about area started -->
+  <section class="container custom_container mt-10">
+    <div class="bg-white w-full px-4 py-2">
+      <input type="checkbox" id="about" class="peer hidden">
+      <label for="about" class="flex justify-between text-sm md:text-xl">
+        <span class="font-semibold">About RDK Tech Shop In Bangladesh</span>
+        <i class="fa-solid fa-angle-down"></i>
+      </label>
+
+      <div class="h-0 overflow-hidden peer-checked:h-auto transition-all duration-300">
+        <span class="text-xs">বাংলাদেশের বিশ্বস্ত RDK Tech Shop থেকে কিনুন লেটেস্ট ল্যাপটপ, কম্পিউটার ও জেনুইন অ্যাক্সেসরিজ। আমরা দিচ্ছি
+          সেরা দামে প্রযুক্তির উপর শতভাগ আস্থা।</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer area started -->
+  <section class="bg-black w-full h-full">
+    <div class="container custom_container mt-10 py-24 pb-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 place-items-center gap-4 py-10">
+        <div>
+          <h2 class="text-2xl font-extrabold bg-gradient-to-l from-[#F86535] to-[#F7AD2F] bg-clip-text text-transparent">RDK TECH</h2>
+          <span class="text-white mt-16">Discover technology wonders at Tech Haven! From laptops to desktops, we have it all for a seamless computing experience. Unbeatable prices and knowledgeable staff. Visit us today!</span>
+        </div>
+        <div class="bg-yellow-50 w-32 h-1 md:h-32 md:w-1"></div>
+        <div class="flex justify-start md:justify-end w-full">
+          <button class="text-white border-2 border-primary py-3 px-6 rounded-2xl hover:shadow-amber-300 hover:shadow-xs transition-all duration-300">Contact Us</button>
+        </div>
+      </div>
+      <div class="border-2 border-t-amber-50/35 grid grid-cols-1 md:grid-cols-3 w-full py-10 gap-12">
+        <div class="text-white flex flex-col gap-1">
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- About us</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Branches & Pickup Points</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Warranty</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- EMI</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Cookie Policy</a>
+        </div>
+        <div class="text-white flex flex-col gap-1">
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Order Procedure</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Home Delivery</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Return & Refund Policy</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Payment Method</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Terms & Conditions</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">- Privacy Policy</a>
+        </div>
+        <div class="text-white flex flex-col gap-1">
+          <h2 class="text-2xl font-semibold text-primary">Contact Us</h2>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">105 Road Banani, Dhaka, Bangladesh</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">hello@rdktech.com</a>
+          <a href="#" class="text-white hover:text-primary transition-all duration-300">01982151204</a>
+        </div>
+      </div>
+      <footer class="w-full flex flex-col md:flex-row gap-4 md:gap-1 items-center justify-center">
+        <div>
+          <a href="#" class="text-white text-2xl mr-4 transition-all duration-300 hover:text-primary"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" class="text-white text-2xl mr-4 transition-all duration-300 hover:text-primary"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-white text-2xl mr-4 transition-all duration-300 hover:text-primary"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <span class="text-white">Copyright © 2025 RDK Tech, All Rights Reserved.</span>
+      </footer>
+    </div>
+  </section>
+</body>
+</html>
